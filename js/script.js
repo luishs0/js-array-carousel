@@ -22,6 +22,10 @@ down.addEventListener("click", function() {
         item[imgPosition].classList.remove("d-block");
         imgPosition += 1;
         item[imgPosition].classList.add("d-block");
+    } else if (imgPosition >= 4) {
+        item[imgPosition].classList.remove("d-block");
+        imgPosition -= 4;
+        item[imgPosition].classList.add("d-block");
     }
 })
 
@@ -30,7 +34,11 @@ up.addEventListener("click", function() {
 
     if (imgPosition > 0) {
         item[imgPosition].classList.remove("d-block");
-    imgPosition -= 1;
-    item[imgPosition].classList.add("d-block");
+        imgPosition -= 1;
+        item[imgPosition].classList.add("d-block");
+    } else if (imgPosition <= 0) {
+        item[imgPosition].classList.remove("d-block");
+        imgPosition += 4;
+        item[imgPosition].classList.add("d-block");
     }
 })
