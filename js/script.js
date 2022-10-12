@@ -13,3 +13,24 @@ for (let i = 0; i < listImg.length; i++) {
 const item = document.getElementsByClassName("item");
 let imgPosition = 0;
 item[imgPosition].classList.add("d-block");
+
+
+const down = document.querySelector(".down")
+down.addEventListener("click", function() {
+    
+    if (imgPosition < 4) {
+        item[imgPosition].classList.remove("d-block");
+        imgPosition += 1;
+        item[imgPosition].classList.add("d-block");
+    }
+})
+
+const up = document.querySelector(".up");
+up.addEventListener("click", function() {
+
+    if (imgPosition > 0) {
+        item[imgPosition].classList.remove("d-block");
+    imgPosition -= 1;
+    item[imgPosition].classList.add("d-block");
+    }
+})
