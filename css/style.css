@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.slider {
+    width: 70%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+}
+
+.up {
+    position: absolute;
+    top: 4%;
+    right: 50%;
+    transform: translate(50%, 0);
+}
+
+.down {
+    position: absolute;
+    bottom: 4%;
+    right: 50%;
+    transform: translate(50%, 0);
+}
+
+.up, .down {
+    background-color: white;
+    padding: .2rem;
+    border-radius: 50%;
+    line-height: .2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.img-container, .item {
+    height: 100%;
+    width: 100%;
+}
+
+.item {
+    display: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
